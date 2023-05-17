@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//localhost/sampleにアクセスしたら、IndexControllerにつないで、classのshowメソッドを呼び出す
 Route::get('/sample', [\App\Http\Controllers\Sample\IndexController::class,'show']);

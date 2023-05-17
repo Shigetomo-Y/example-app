@@ -9,6 +9,6 @@ class IndexController extends Controller
 {
     public function show()
     {
-        return 'chamshige';
+        return view('index'); //resources/viewsフォルダのindex.blade.phpを展開する
     }
 }
