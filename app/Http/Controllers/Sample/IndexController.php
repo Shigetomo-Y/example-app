@@ -4,11 +4,14 @@ namespace App\Http\Controllers\Sample;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Sample;
 
 class IndexController extends Controller
 {
     public function show()
     {
-        return view('index'); //resources/viewsフォルダのindex.blade.phpを展開する
+        $sample = Sample::find(1);
+        
+        return view('index', ['sample' => $sample]); //resources/viewsフォルダのindex.blade.phpを展開する
     }
 }
